@@ -6,7 +6,7 @@ if (!process.env.NODE_ENV) {
 }
 
 var mongoose = require('mongoose')
-mongoose.connect(config.dev.env.MONGODB_ENV)
+mongoose.connect(JSON.parse(config.dev.env.MONGODB_ENV))
 
 var opn = require('opn')
 var path = require('path')
